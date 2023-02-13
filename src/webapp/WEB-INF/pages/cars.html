@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cars</title>
+</head>
+<body>
+    <div>
+        <table style="
+            background-color: transparent;
+            border-color: #000;
+            border-radius: 10px;
+            border-style: solid;
+            border-width: thick;
+            padding: 15px;
+            font-family: sans-serif;
+            font-weight: 500;
+        ">
+            <tr>
+                <th scope="col" style="padding: 10px;">Color</th>
+                <th scope="col" style="padding: 10px;">Seats</th>
+                <th scope="col" style="padding: 10px;">Speed</th>
+            </tr>
+            <tr th:each="car: ${carList}">
+                <td style="text-align: center; padding: 15px;" th:text="${car.getColor()}"></td>
+                <td style="text-align: center; padding: 15px;"  th:text="${car.getSeats()}"></td>
+                <td style="text-align: center; padding: 15px;" th:text="${car.getSpeed()}"></td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
